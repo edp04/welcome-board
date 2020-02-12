@@ -1,0 +1,51 @@
+.grid{
+    margin: 0;
+    padding: 0;
+  
+}
+.demo-1 {
+    height: 50px;  
+    overflow: hidden;
+    position: relative;
+   }
+   
+   .demo-1 h3 {
+    font-family: 'PT Serif', serif;
+    font-size: 3em;
+    color: #e91e1e;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);    
+    transform:translateX(100%);
+    /* Apply animation to this element */  
+    -moz-animation: demo-1 15s linear infinite;
+    -webkit-animation: demo-1 15s linear infinite;
+    animation: demo-1 15s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @-moz-keyframes demo-1 {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes demo-1 {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes demo-1 {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);       
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }
