@@ -17,12 +17,37 @@
   
 
   <div class="row justify-content-center " >
-    <div class="col-lg-8 col-8 grid">
+    <div class="col-lg-8 col-8 grid border">
       <video class="video-fluid" autoplay loop controls muted>
-        <source src="./Safety Induction MR1.mp4" type="video/mp4" />
+        <source style="height: 800px;" src="./new.mp4" type="video/mp4" />
       </video>
+      <div style="background-color: rgba(220, 0, 0, 0.849); height: 8em;">
+
+        <div style="font-size: 50px; " class="text-center font-weight-bold text-white pt-4">
+          <script>
+       
+            var hari = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var bulan = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+         
+            var tanggal = new Date().getDate();
+            var xhari = new Date().getDay();
+            var xbulan = new Date().getMonth();
+            var xtahun = new Date().getYear();
+         
+            var hari = hari[xhari];
+            var bulan = bulan[xbulan];
+            var tahun = (xtahun < 1000)?xtahun + 1900 : xtahun;
+         
+             
+            document.write(hari +', ' + tanggal + ' ' + bulan + ' ' + tahun);
+         
+         
+           </script>
+        </div>
+
+      </div>
     </div>
-    <div class="col-lg-4 col-4 grid border-left">
+    <div class="col-lg-4 col-4 grid border">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -36,34 +61,14 @@
           </div>
         </div>
       </div>
-      <div style="background-color: #DC0000;" class="text-center h2-responsive font-weight-bold text-white">
-        <script>
-       
-          var hari = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-          var bulan = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-       
-          var tanggal = new Date().getDate();
-          var xhari = new Date().getDay();
-          var xbulan = new Date().getMonth();
-          var xtahun = new Date().getYear();
-       
-          var hari = hari[xhari];
-          var bulan = bulan[xbulan];
-          var tahun = (xtahun < 1000)?xtahun + 1900 : xtahun;
-       
-           
-          document.write(hari +', ' + tanggal + ' ' + bulan + ' ' + tahun);
-       
-       
-         </script>
-      </div>
+
     </div>
   </div>
 
 
 
-  <div class="demo-1">
-    <h3 class="font-weight-bold">WELCOME TO PT. S-IK INDONESIA</h3>
+  <div class="demo-1 mt-3">
+    <h1 class="font-weight-bold">WELCOME TO PT. S-IK INDONESIA</h3>
   </div>
 
 

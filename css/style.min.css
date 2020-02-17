@@ -9,10 +9,10 @@
     position: relative;
    }
    
-   .demo-1 h3 {
+   .demo-1 h1 {
     font-family: 'PT Serif', serif;
-    font-size: 3em;
-    color: #e91e1e;
+    font-size: 4em;
+    color: rgba(220, 0, 0, 0.849);;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -24,9 +24,9 @@
     -webkit-transform:translateX(100%);    
     transform:translateX(100%);
     /* Apply animation to this element */  
-    -moz-animation: demo-1 15s linear infinite;
-    -webkit-animation: demo-1 15s linear infinite;
-    animation: demo-1 15s linear infinite;
+    -moz-animation: demo-1 10s linear infinite;
+    -webkit-animation: demo-1 10s linear infinite;
+    animation: demo-1 10s linear infinite;
    }
    /* Move it (define the animation) */
    @-moz-keyframes demo-1 {
