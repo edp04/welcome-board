@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Wellcome Board</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet"> 
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+  
+
+  <div class="row justify-content-center "  >
+    <div class="col-lg-8 col-8 grid border-right">
+
+        <video class="video-fluid" id="myvideo" controls>
+            <source class="active" src="./vidio/Pencegahan Virus Corona- Sudah Benarkah Cara Anda Memakai Masker.mp4" type="video/mp4" />
+            <source src="./vidio/Tips Menghindari Virus Corona.mp4" type="video/mp4" />
+            <source src="./vidio/Wajib Tahu! Gejala Virus Corona dan Cara Pencegahannya.mp4" type="video/mp4" />
+        </video>
+      <div style="background-image: linear-gradient(to right, #e53935 , #e35d5b); height: 8em;">
+
+        <div style="font-size: 50px;  font-family: 'PT Serif', serif; " class="text-center font-weight-bold text-white pt-4">
+          <script>
+       
+            var hari = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var bulan = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+         
+            var tanggal = new Date().getDate();
+            var xhari = new Date().getDay();
+            var xbulan = new Date().getMonth();
+            var xtahun = new Date().getYear();
+         
+            var hari = hari[xhari];
+            var bulan = bulan[xbulan];
+            var tahun = (xtahun < 1000)?xtahun + 1900 : xtahun;
+         
+             
+            document.write(hari +', ' + tanggal + ' ' + bulan + ' ' + tahun);
+         
+         
+           </script>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-4 grid border-bottom">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./1.png">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./2.png">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./3.png">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="demo-1 mt-3">
+    <h1 class="font-weight-bold">WELCOME TO PT. S-IK INDONESIA</h3>
+  </div>
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/pre.js"></script>
+  <script type="text/javascript" src="js/vibrate.js"></script>
+  <script>
+var myvid = document.getElementById('myvideo');
+
+myvid.addEventListener('ended', function(e) {
+  // get the active source and the next video source.
+  // I set it so if there's no next, it loops to the first one
+  var activesource = document.querySelector("#myvideo source.active");
+  var nextsource = document.querySelector("#myvideo source.active + source") || document.querySelector("#myvideo source:first-child");
+  
+  // deactivate current source, and activate next one
+  activesource.className = "";
+  nextsource.className = "active";
+  
+  // update the video source and play
+  myvid.src = nextsource.src;
+  myvid.play();
+});
+  </script>
+</body>
+
+</html>
